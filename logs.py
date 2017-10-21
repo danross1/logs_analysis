@@ -29,8 +29,8 @@ def top_authors():
              "ORDER BY total_views DESC;")
     results = database_function(query)
     print("\nWho are the most popular authors of all time?\n")
-    for name in results:
-        print("    {}".format(name))
+    for name, total_views in results:
+        print("    {} -- {} views".format(name, total_views))
 
 
 def err_rates():
